@@ -10,7 +10,8 @@
 - 内存优化
 
 ## 演示动图
-![demo](docs/demo.gif)
+<img width="480" height="270" alt="demo" src="https://github.com/user-attachments/assets/a1cb3b73-9df0-493b-a4f4-ba3f6447d467" />
+
 
 ## 硬件清单 (Hardware Requirements)
 
@@ -114,17 +115,6 @@ const Song song[] = {
   - `display.cpp` / `.h`：LCD 屏幕刷新逻辑。
   - `melody.cpp` / `.h`：歌曲数据结构与乐谱定义。
   - `notes.h`：音符频率宏定义表。
-
-```mermaid
-graph TD
-    INO[Music_Player.ino] --> Player[player.cpp]
-    INO --> IR[ir_control.cpp]
-    INO --> Display[display.cpp]
-    IR -->|发送控制指令| Player
-    Player -->|提供当前状态/歌名| Display
-    Player -->|读取乐谱数据| Melody[melody.cpp]
-    Melody -->|读取音符| notes[notes.h]
-```
 
 ## 开源协议 (License)
 本项目基于 [MIT License](LICENSE) 开源。
